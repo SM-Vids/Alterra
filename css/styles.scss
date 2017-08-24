@@ -1,0 +1,11 @@
+@import "varibles";
+@import "mixins";
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed');
+
+#wrapper{
+    background: $bg-color;
+
+    header{
+        background-image: url("../img/header.png");
+    }
+}
