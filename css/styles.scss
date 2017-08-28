@@ -1,11 +1,179 @@
 @import "varibles";
 @import "mixins";
-@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed');
+@import "fonts";
+@import "login";
 
-#wrapper{
+body{
+    margin: 0;
     background: $bg-color;
-
-    header{
-        background-image: url("../img/header.png");
+    
+    #wrapper{
+        display: grid;
+        grid-template-columns: 15vw auto 10vw;
+        grid-template-rows: 400px auto 20px 10vh;
+        grid-template-areas: 
+        "header header ."
+        "nav main ."
+        "hr hr hr"
+        "footer footer footer";
+        
+        header{
+            background-image: url("../img/header.png");
+            color: white;
+            background-repeat: no-repeat;
+            grid-area: header;
+            position: relative;
+            
+            h1{
+                font-size: 40px;
+                text-shadow: 5px 5px 5px #2A2A2A;
+                font-family: $Coalition;
+                letter-spacing: 8px;
+                margin-top: 0;
+                margin-left: 20px;
+                text-transform: uppercase;
+            }
+            
+            h5{
+                font-family: $Glyphs;
+                font-size: 25px;
+                text-shadow: 5px 5px 5px #2A2A2A;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                left: 20vw;
+            }
+        } 
+        nav{
+            grid-area: nav;
+            background-color: $nav-color;
+            
+            img{
+                display: none;
+                height: 50px;
+                width: 50px;
+                margin: 10px;
+            }
+            
+            ul{
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                
+                :first-child{
+                    a{
+                        padding-top: 20px;
+                    }
+                }
+                
+                li a{
+                    color: white;
+                    font-size: 20px;
+                    text-decoration: none;
+                    display: block;
+                    padding: 5px;
+                    padding-left: 40px;
+                    transition: all .3s;
+                    
+                    &:hover{
+                        background: darken($nav-color ,  20)
+                    } 
+                } 
+            }
+        }
+        main{
+            background: $main-color;
+            border: 3px solid black;
+            box-shadow: 5px 5px 5px grey;
+            grid-area: main;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-family: $saira;
+            
+            article{
+                text-align: center;
+                display: block;
+                width: 45%;
+                margin: 10px;
+                border: 3px solid black;
+                border-radius: 5px;
+                background: darken($main-color ,  10);
+                
+                img{
+                    width: 90%;
+                    max-width: 500px;
+                    border: 5px solid $bg-color;
+                }
+                
+                p{
+                    margin: 5px 10px;
+                }
+            }            
+        }
+        hr{
+            grid-area: hr;
+            border: 0;
+            height: 5px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+        footer{
+            font-family: $Footer;
+            grid-area: footer;
+            background: $main-color;
+            padding-left: 10px;
+        }
+    }
+    .active{
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    @media screen and (max-width: 1185px){
+        #wrapper{
+            grid-template-areas: 
+            "header header header"
+            "nav main main"
+            "hr hr hr"
+            "footer footer footer";
+        }
+    }
+    @media screen and (max-width: 900px){
+        #wrapper{
+            grid-template-rows: 400px auto auto 20px 10vh;
+            grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "main main main"
+            "hr hr hr"
+            "footer footer footer";
+            
+            nav{
+                img{
+                    display: block;
+                }
+                ul{
+                    display: none;
+                }
+            }
+        }        
+    }
+    @media screen and (max-width: 800px){
+        #wrapper > main > article{
+            width: 100%;
+        }
+        #wrapper > header{
+            h1{
+                font-size: 20px;
+            }
+            
+            h5{
+                font-size: 20px;
+            }
+        }
     }
 }

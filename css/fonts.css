@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Saira+Condensed");
+@font-face {
+  font-family: 'Glyphs';
+  src: url("../fonts/atlantis-glyphs.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'coalition';
+  src: url("../fonts/header.ttf") format("truetype");
+}

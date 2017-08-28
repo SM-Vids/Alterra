@@ -1,0 +1,7 @@
+body > #wrapper > nav > ul > li > #login {
+  display: none;
+}
+
+body > #wrapper > nav > ul > li > #login input {
+  font-family: "Saira Semi Condensed", sans-serif;
+}
