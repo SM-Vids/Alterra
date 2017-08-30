@@ -12,7 +12,7 @@
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles.min.css">
 	<link rel="icon" href="img/logo.png">
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -37,51 +37,30 @@
 			<li><a href="#">Point Of Origin</a></li>
 			<li><a href="#">The Team</a></li>
 			<li>
-				<a href="#">Log In</a>
-				<form id="login">
-					<input type="text" placeholder="Username">
-					<input type="password" placeholder="Enter Password">
-					<button>Log In</button>
-				</form>
+				<a class="login-link" href="#">Log In</a>
 			</li>
+				<form id="login">
+				<input type="text" placeholder="Username">
+				<input type="password" placeholder="Enter Password">
+				<button>Log In</button>
+			</form>
+			
 		</ul>
 	</nav>
 <main>
-	<article>
-		<h2>Article 1</h2>
-		<img src="img/article1.jpg" alt="Snow Planet">
-		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum dolorem alias, quam quas voluptate accusamus iure similique vel rem magni incidunt tenetur. Laboriosam, at quibusdam culpa totam similique perferendis consectetur.
-		</p>
-	</article>
-	<article>
-		<h2>Article 2</h2>
-		<img src="img/article2.jpg" alt="Orion over a planet">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, reprehenderit provident. Harum debitis architecto accusamus! Nostrum ab beatae ullam inventore incidunt placeat, numquam vitae dolor repellat fugiat, nisi voluptatibus voluptatum.
-		</p>
-	</article>
-	<article>
-		<h2>Article 3</h2>
-		<img src="img/article3.jpg" alt="Outgoing gate screen">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis adipisci facilis blanditiis veritatis exercitationem quae vero qui enim esse voluptatem aut velit, nostrum quaerat consequatur error! Corporis alias consectetur maiores.
-		</p>
-	</article>
-	<article>
-		<h2>Article 4</h2>
-		<img src="img/article4.jpg" alt="Server">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quis aut, adipisci error deleniti mollitia laborum ullam corporis at officia, omnis maiores nemo iusto sunt excepturi, quae reiciendis quia aperiam.
-		</p>
-	</article>
-	<article>
-		<h2>Article 5</h2>
-		<img src="img/article5.jpg" alt="Spaceship">
-		<p>
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni non doloremque eius provident quaerat quis enim libero voluptatum est error dolor incidunt ab quasi similique dolorem, tempore quae quod officia.
-		</p>
-	</article>
+<!--
+	id
+	heading
+	published
+	author
+	imgSrc
+	imgAlt
+	text
+ -->
+	
+	<?php
+		require "getArticle.php";
+	 ?>
 </main>
 <hr>
 <footer>

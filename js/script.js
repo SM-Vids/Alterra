@@ -11,7 +11,7 @@ $(document).ready(function(){
            $('nav > ul').slideUp();
        }
    });
-   $('nav > ul > li').last().children().on('click', function () {
-       $('#login').slideToggle();
+   $('#login-link').on('click', function () {
+       $('body > nav > ul > li > #login').slideToggle();
    });
 });

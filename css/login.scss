@@ -1,8 +1,53 @@
 @import "varibles";
 
-body > #wrapper > nav > ul > li > #login{
+body > #wrapper > nav > ul > #login{
     display: none;
+    width: 140px;
+
     input{
         font-family: $saira;
+        background: lightblue;
+        padding: 5px;
+        border-radius: 10px;
+        margin: 5px;
+        width: 125px;
+        border: 0;
+    }
+
+    button{
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        margin: 0 auto;
+        border: 2px solid $nav-color;
+        -webkit-border-radius: 40px;
+        border-radius: 40px;
+        font: normal 20px/20px "Advent Pro", Helvetica, sans-serif;
+        color: white;
+        text-align: center;
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        letter-spacing: 1px;
+        background: rgba(0,0,0,0);
+        -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+        -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+        -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+        transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+
+        &:hover{
+            border: 2px solid #49aed8;
+            color: #ffffff;
+            background: #0782B7;
+        }
+
+        &:active{
+            -webkit-transition: none;
+            -moz-transition: none;
+            -o-transition: none;
+            transition: none;
+        }
     }
 }

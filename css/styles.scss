@@ -133,6 +133,12 @@ body{
         font-weight: bold;
         font-size: 25px;
     }
+    .time{
+        color: darkgrey;
+        font-size: 10px;
+        font-family: $saira;
+        text-align: left;
+    }
     @media screen and (max-width: 1185px){
         #wrapper{
             grid-template-areas: 
