@@ -1,18 +1,42 @@
-body > #wrapper > nav > ul > #login {
-  width: 140px;
+body {
+  overflow-x: hidden;
 }
 
-body > #wrapper > nav > ul > #login input {
-  font-family: "Saira Semi Condensed", sans-serif;
-  background: lightblue;
-  padding: 5px;
-  border-radius: 10px;
-  margin: 5px;
-  width: 125px;
+html > body > #wrapper > main {
+  background: #49aed8;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+html > body > #wrapper > main form label {
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+html > body > #wrapper > main form input {
+  width: 70vw;
+  padding: 10px;
   border: 0;
+  border-radius: 20px;
+  margin: 10px;
+  margin-bottom: 25px;
 }
 
-body > #wrapper > nav > ul > #login button {
+html > body > #wrapper > main form #text {
+  height: 20ex;
+  resize: none;
+  width: 70vw;
+  padding: 10px;
+  border: 0;
+  border-radius: 20px;
+  margin: 10px;
+  margin-bottom: 25px;
+}
+
+html > body > #wrapper > main form button {
+  margin: 0 auto;
+  display: block;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -25,7 +49,6 @@ body > #wrapper > nav > ul > #login button {
   border-radius: 40px;
   font: normal 20px/20px "Advent Pro", Helvetica, sans-serif;
   color: white;
-  text-align: center;
   -o-text-overflow: clip;
   text-overflow: clip;
   letter-spacing: 1px;
@@ -36,13 +59,13 @@ body > #wrapper > nav > ul > #login button {
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
-body > #wrapper > nav > ul > #login button:hover {
+html > body > #wrapper > main form button:hover {
   border: 2px solid #49aed8;
   color: #ffffff;
   background: #0782B7;
 }
 
-body > #wrapper > nav > ul > #login button:active {
+html > body > #wrapper > main form button:active {
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;

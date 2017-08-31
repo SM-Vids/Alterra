@@ -10,7 +10,6 @@
 }
 
 body > #wrapper > nav > ul > #login {
-  display: none;
   width: 140px;
 }
 
@@ -104,6 +103,7 @@ body #wrapper header h5 {
 body #wrapper nav {
   grid-area: nav;
   background-color: #0782B7;
+  border-top: 3px solid black;
 }
 
 body #wrapper nav img {

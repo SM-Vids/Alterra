@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $('nav > ul > #login').hide();
     $('nav > a > img').on('click', function () {
         event.preventDefault();
        $('nav > ul').slideToggle();
@@ -11,7 +12,7 @@ $(document).ready(function(){
            $('nav > ul').slideUp();
        }
    });
-   $('#login-link').on('click', function () {
-       $('body > nav > ul > li > #login').slideToggle();
+   $('.login-link').on('click', function () {
+       $('#login').slideToggle();
    });
 });
