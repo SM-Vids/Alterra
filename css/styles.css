@@ -140,6 +140,12 @@ body #wrapper nav ul li a:hover {
   background: #033c55;
 }
 
+body #wrapper nav ul li h2 {
+  color: white;
+  display: block;
+  padding-left: 40px;
+}
+
 body #wrapper main {
   background: #F4F4F4;
   border: 3px solid black;
