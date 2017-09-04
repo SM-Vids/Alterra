@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('nav > ul > #login').hide();
+    $('nav > ul > #createUserForm').hide();
     $('nav > a > img').on('click', function () {
         event.preventDefault();
        $('nav > ul').slideToggle();
@@ -13,6 +14,11 @@ $(document).ready(function(){
        }
    });
    $('.login-link').on('click', function () {
+       event.preventDefault;
        $('#login').slideToggle();
+   });
+   $('#createUser').on('click', function() {
+    event.preventDefault;
+    $('#createUserForm').slideToggle();
    });
 });

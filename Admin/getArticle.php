@@ -4,7 +4,7 @@
 
     //lav en variabel "statement" og put sql koden over i den. (dbh har forbindelse til databasen)
     //sql koden tager alt i tabellen "articles" og soterer dem fra højest id til lavest id
-    $statement = $dbh->prepare("SELECT * FROM articles ORDER BY id DESC ");
+    $statement = $dbh->prepare("SELECT * FROM articles JOIN users ON users.userId = articles.authorId ORDER BY id DESC ");
 
     //kør sql koden i databasen
     $statement->execute();
@@ -17,7 +17,7 @@
 		    <h2><?php echo $row['heading']; ?></h2>
 
         <?php /*echo tager vores array($row) og finder exempelvis heading ud af tabellen og skriver det i det tag eller atrtbut echo ligger i*/ ?>
-		    <p class="time"><?php echo $row['published']; ?> by: <?php echo $row['authorId']; ?></p>
+		    <p class="time"><?php echo $row['published']; ?> by: <?php echo $row['dbUsername']; ?></p>
 		        <img src="img/<?php echo $row['imgSrc']; ?>" alt="<?php echo $row['imgAlt']; ?>">
 		    <p>
                 <?php echo $row['description']; ?>

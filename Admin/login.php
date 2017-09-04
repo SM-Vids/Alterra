@@ -10,12 +10,13 @@
     $statement->execute();
 
     if(empty($row = $statement->fetch())){
-        $_SESSION['loginFail'] = true;
-        header("location: ../index.php");
+        echo "<script>alert(\"Sorry the database doesn't seem to recognize you.\");</script>";
+        echo "<script>setTimeout(\"location.href = '../index.php';\",1);</script>";
     }else{
         session_start();
         $_SESSION['userName'] = $row['dbUsername'];
         $_SESSION['accessLevel'] = $row['accessLevel'];
+        $_SESSION['userId'] = $row['userId'];
         header("location: ../index.php");
     }
 ?>

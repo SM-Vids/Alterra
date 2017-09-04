@@ -9,11 +9,11 @@
   src: url("../fonts/header.ttf") format("truetype");
 }
 
-body > #wrapper > nav > ul > #login {
+body > #wrapper > nav > ul > form {
   width: 140px;
 }
 
-body > #wrapper > nav > ul > #login input {
+body > #wrapper > nav > ul > form input {
   font-family: "Saira Semi Condensed", sans-serif;
   background: lightblue;
   padding: 5px;
@@ -23,7 +23,7 @@ body > #wrapper > nav > ul > #login input {
   border: 0;
 }
 
-body > #wrapper > nav > ul > #login button {
+body > #wrapper > nav > ul > form button {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -47,13 +47,13 @@ body > #wrapper > nav > ul > #login button {
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
-body > #wrapper > nav > ul > #login button:hover {
+body > #wrapper > nav > ul > form button:hover {
   border: 2px solid #49aed8;
   color: #ffffff;
   background: #0782B7;
 }
 
-body > #wrapper > nav > ul > #login button:active {
+body > #wrapper > nav > ul > form button:active {
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
