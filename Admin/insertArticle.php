@@ -25,9 +25,10 @@ session_start();
         if (file_exists($target_file)) {
             echo "Sorry, file already exists.";
             $uploadOk = 0;
+            $imgSrc = basename($_FILES["imgSrc"]["name"]);
         }
         // Check file size
-        if ($_FILES["imgSrc"]["size"] > 5000000) {
+        if ($_FILES["imgSrc"]["size"] > 1000000) {
             echo "Sorry, your file is too large.";
             $uploadOk = 0;
         }
@@ -44,6 +45,7 @@ session_start();
         } else {
             if (move_uploaded_file($_FILES["imgSrc"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["imgSrc"]["name"]). " has been uploaded.";
+                $imgSrc = basename($_FILES["imgSrc"]["name"]);
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }

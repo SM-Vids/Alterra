@@ -80,11 +80,11 @@ session_start();
                     <br>
                     <label for="imgSrc">Post image</label>
                     <br>
-                    <input type="file" id="imgSrc" name="imgSrc">
+                    <input type="file" id="imgSrc" name="imgSrc" required>
                     <br>
                     <label for="imgAlt">Image description</label>
                     <br>
-                    <input type="text" id="imgAlt" placeholder="Image desc." name="imgAlt">
+                    <input type="text" id="imgAlt" placeholder="Image desc." name="imgAlt" required>
                     <br>
                     <label for="text">Post content</label>
                     <br>

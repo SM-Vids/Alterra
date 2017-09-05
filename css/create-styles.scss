@@ -16,6 +16,13 @@ html > body > #wrapper > main{
             font-size: 17px;
         }
 
+        #imgSrc{
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: 3px solid white;
+        }
+
         input{
             width: 70vw;
             padding: 10px;

@@ -1,6 +1,6 @@
 <?php
     $formUsername = $_POST['formUsername'];
-    $formPassword = $_POST['formPassword'];
+    $formPassword = hash( 'sha512', $_POST['formPassword']);
 
     require_once "connect.php";
 

@@ -14,6 +14,13 @@ html > body > #wrapper > main form label {
   font-size: 17px;
 }
 
+html > body > #wrapper > main form #imgSrc {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px solid white;
+}
+
 html > body > #wrapper > main form input {
   width: 70vw;
   padding: 10px;
