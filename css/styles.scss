@@ -120,6 +120,16 @@ body{
                 p{
                     margin: 5px 10px;
                 }
+                a{
+                    color: red;
+                    font-weight: bold;
+                    text-decoration: none;
+                    display: block;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
             }            
         }
         hr{

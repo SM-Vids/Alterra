@@ -1,6 +1,6 @@
 <?php
 session_start();
-    if (!isset($_SESSION['accessLevel']) || $_SESSION['accessLevel'] != 1 ) {
+    if (isset($_SESSION['accessLevel']) && $_SESSION['accessLevel'] >= 4 ) {
         ?>
         <!doctype html>
         <html class="no-js" lang="">
@@ -60,18 +60,7 @@ session_start();
 	<link rel="icon" href="../img/logo.png">
 	<script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-        <div id="wrapper">
-            <header>
-                <h1>The Alterra Expedition</h1>
-                <h5>- auHIzr</h5>
-            </header>
-            <?php require_once "adminnav.php" ?>
+        <?php require "AdminContent/body.php"; ?>
             <main>
                 <form action="insertArticle.php" method="POST" enctype="multipart/form-data" >
                     <label for="heading">Title of the post</label>
@@ -93,12 +82,6 @@ session_start();
                     <button type="submit" value="Submit">Submit</button>
                 </form>
             </main>
-        <hr>
-        <footer>
-            <h2>Designed By: DCSL.net </h2>
-        </footer>
-        </div>
-        <?php require "adminscripts.php" ?>
-    </body>
-</html>
+        <?php require "AdminContent/footer.php" ?>
+        <?php require "AdminContent/scripts.php" ?>
 <?php } ?>

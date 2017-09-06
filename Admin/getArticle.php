@@ -18,6 +18,18 @@
 
         <?php /*echo tager vores array($row) og finder exempelvis heading ud af tabellen og skriver det i det tag eller atrtbut echo ligger i*/ ?>
 		    <p class="time"><?php echo $row['published']; ?> by: <?php echo $row['dbUsername']; ?></p>
+            <?php
+                if (isset($_SESSION['accessLevel']) && $_SESSION['accessLevel'] <= 2 ) {
+                    ?>
+                    <a href="Admin/deleteArticle.php?articleId=<?php echo $row['id']; ?>">Delete Article</a>
+                    <?php
+                }
+                else if(isset($_SESSION['accessLevel']) && $_SESSION['accessLevel'] == 3 && $_SESSION['userName'] == $row['dbUsername']){
+                    ?>
+                    <a href="Admin/deleteArticle.php?articleId=<?php echo $row['id']; ?>">Delete Article</a>
+                    <?php
+                }
+            ?>
 		        <img src="img/<?php echo $row['imgSrc']; ?>" alt="<?php echo $row['imgAlt']; ?>">
 		    <p>
                 <?php echo $row['description']; ?>

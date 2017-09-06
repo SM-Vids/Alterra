@@ -2,17 +2,21 @@
 session_start();
 //Varibles(
     $heading=$_POST['heading'];
-    $imgSrc= "...";
+    $imgSrc= $_FILES['imgSrc'];
     $imgAlt=$_POST['imgAlt'];
     $description=$_POST['text'];
     $currentUser = $_SESSION['userId'];
+
+    echo "<pre>";
+    print_r($_FILES);
+    echo "</pre>";
     
     $target_dir = "../img/";
     $target_file = $target_dir . basename($_FILES["imgSrc"]["name"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     
-    if(isset($_POST["submit"])) {
+    if(true) {
         $check = getimagesize($_FILES["imgSrc"]["tmp_name"]);
         if($check !== false) {
             echo "File is an image - " . $check["mime"] . ".";
@@ -58,7 +62,7 @@ session_start();
     
     $statement->bindParam(1, $heading);
     $statement->bindParam(2, $currentUser);
-    $statement->bindParam(3, $imgSrc);
+    $statement->bindParam(3, $_FILES["imgSrc"]["name"]);
     $statement->bindParam(4, $imgAlt);
     $statement->bindParam(5, $description);
     
